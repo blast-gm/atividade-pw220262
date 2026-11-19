@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block titulo %}Resposta{% endblock %}
+{% block content %}
+<h1>Resposta</h1>
+<p><strong>Enunciado:</strong> {{ enunciado }}</p>
+<p>Aluno: <strong>{{ problema.nome }}</strong></p>
+<p>Notas: {{ problema.nota1 }}, {{ problema.nota2 }}, {{ problema.nota3 }}</p>
+<p>Média: <strong>{{ media }}</strong></p>
+<p>Situação: <strong>{{ problema.situacao() }}</strong></p>
+<a class="btn" href="/index">Voltar</a>
+<a class="btn" href="/autor">Autor</a>
+{% endblock %}

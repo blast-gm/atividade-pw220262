@@ -15,6 +15,7 @@ from models.Conexao import engine, Base
 
 Session = sessionmaker(bind=engine)
 
+from controllers.StaticController import *
 from controllers.ProblemaController import *
 from controllers.AutorController import *
 from controllers.AdminController import *

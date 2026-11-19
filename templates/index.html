@@ -2,8 +2,8 @@
 {% block titulo %}Média de notas{% endblock %}
 {% block content %}
 <h1>Média de notas</h1>
-<p><strong>Enunciado:</strong> Leia o nome de um aluno e suas três notas. Calcule a média aritmética e informe se o aluno está aprovado (média &ge; 7) ou reprovado.</p>
-<form action="/resultado" method="post">
+<p><strong>Enunciado:</strong> {{ enunciado }}</p>
+<form action="/problema" method="post">
 	<label for="nome">Nome do aluno:</label>
 	<input type="text" id="nome" name="nome" required>
 	<label for="nota1">Nota 1:</label>
