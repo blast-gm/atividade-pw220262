@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Cadastro de administrador{% endblock %}
+{% block content %}
+<h1>Cadastrar administrador</h1>
+{% if erro %}<p style="color:#c0392b">{{ erro }}</p>{% endif %}
+<form action="/admin/register" method="post">
+	<label for="nome">Nome:</label>
+	<input type="text" id="nome" name="nome" required>
+	<label for="usuario">Usuário:</label>
+	<input type="text" id="usuario" name="usuario" required>
+	<label for="senha">Senha:</label>
+	<input type="password" id="senha" name="senha" required>
+	<button type="submit">Cadastrar</button>
+	<a class="btn" href="/admin/login">Voltar</a>
+</form>
+{% endblock %}

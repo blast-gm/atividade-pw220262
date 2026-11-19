@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block titulo %}Aluno{% endblock %}
+{% block content %}
+<h1>{{ 'Editar' if aluno else 'Novo' }} aluno</h1>
+<form action="/admin/aluno/salvar" method="post">
+	<input type="hidden" name="id" value="{{ aluno.id if aluno else '' }}">
+	<label for="nome">Nome:</label>
+	<input type="text" id="nome" name="nome" required value="{{ aluno.nome if aluno else '' }}">
+	<label for="nota1">Nota 1:</label>
+	<input type="number" id="nota1" name="nota1" min="0" max="10" step="0.1" required value="{{ aluno.nota1 if aluno else '' }}">
+	<label for="nota2">Nota 2:</label>
+	<input type="number" id="nota2" name="nota2" min="0" max="10" step="0.1" required value="{{ aluno.nota2 if aluno else '' }}">
+	<label for="nota3">Nota 3:</label>
+	<input type="number" id="nota3" name="nota3" min="0" max="10" step="0.1" required value="{{ aluno.nota3 if aluno else '' }}">
+	<button type="submit">Salvar</button>
+	<a class="btn" href="/admin/alunos">Cancelar</a>
+</form>
+{% endblock %}

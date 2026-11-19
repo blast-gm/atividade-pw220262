@@ -33,3 +33,5 @@ desktop.ini
 .pytest_cache/
 .coverage
 htmlcov/
+
+pagina_do_github.txt

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}Alunos{% endblock %}
+{% block content %}
+<h1>Alunos</h1>
+<a class="btn" href="{{ url_for('admin_aluno_cadastro') }}">Novo</a>
+<a class="btn" href="{{ url_for('admin_logout') }}">Sair</a>
+<table class="tabela-listrada">
+	<thead><tr><th>Nome</th><th>Notas</th><th>Média</th><th></th><th></th></tr></thead>
+	<tbody>
+	{% for a in alunos %}
+	<tr>
+		<td>{{ a.nome }}</td>
+		<td>{{ a.nota1 }} / {{ a.nota2 }} / {{ a.nota3 }}</td>
+		<td>{{ '%.2f'|format(a.media) }}</td>
+		<td><a href="/admin/aluno/editar/{{ a.id }}">Editar</a></td>
+		<td><a href="/admin/aluno/deletar/{{ a.id }}">Excluir</a></td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
