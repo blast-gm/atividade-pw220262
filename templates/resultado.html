@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block titulo %}Resultado{% endblock %}
+{% block content %}
+<h1>Resultado</h1>
+<p>Aluno: <strong>{{ nome }}</strong></p>
+<p>Notas: {{ nota1 }}, {{ nota2 }}, {{ nota3 }}</p>
+<p>Média: <strong>{{ media }}</strong></p>
+<p>Situação: <strong>{{ situacao }}</strong></p>
+<a class="btn" href="/index">Voltar</a>
+<a class="btn" href="/autor">Autor</a>
+{% endblock %}

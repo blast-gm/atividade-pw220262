@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}Autor{% endblock %}
+{% block content %}
+<h1>Autor</h1>
+<p><strong>Nome:</strong> {{ autor.nome }}</p>
+<h2>Formações acadêmicas</h2>
+<table>
+	<tr><th>Curso</th><th>Instituição</th><th>Ano</th></tr>
+	{% for f in autor.formacoes %}
+	<tr><td>{{ f.curso }}</td><td>{{ f.instituicao }}</td><td>{{ f.ano }}</td></tr>
+	{% endfor %}
+</table>
+<h2>Experiências profissionais</h2>
+<table>
+	<tr><th>Função</th><th>Empresa</th><th>Ano</th></tr>
+	{% for e in autor.experiencias %}
+	<tr><td>{{ e.funcao }}</td><td>{{ e.empresa }}</td><td>{{ e.ano }}</td></tr>
+	{% endfor %}
+</table>
+<a class="btn" href="/index">Voltar</a>
+{% endblock %}
